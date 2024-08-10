@@ -112,6 +112,9 @@
     .images a:hover{
         filter: brightness(60%);
     }
+    .footer{
+        font-size: xx-large;
+    }
 }
 @media screen and (max-width: 1030px) and (min-width: 800px) {
     body{
@@ -219,5 +222,8 @@
     }
     .images a:hover{
         filter: brightness(60%);
+    }
+    .footer{
+        font-size: xx-large;
     }
 }
