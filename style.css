@@ -115,6 +115,7 @@
     .footer{
         font-size: xx-large;
         font-style: italic;
+        font-stretch: expanded;
     }
 }
 @media screen and (max-width: 1030px) and (min-width: 800px) {
