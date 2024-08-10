@@ -114,7 +114,14 @@
     }
     .footer{
         font-size: xx-large;
+<<<<<<< HEAD
         font-style: italic;
+=======
+<<<<<<< HEAD
+        font-style: italic;
+=======
+>>>>>>> cd927f645ab2823c30000f430ae942d6db77f550
+>>>>>>> refs/remotes/origin/footer
     }
 }
 @media screen and (max-width: 1030px) and (min-width: 800px) {
