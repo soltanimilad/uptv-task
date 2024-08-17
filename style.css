@@ -8,6 +8,7 @@
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff")format("woff"),
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.ttf")format("truetype"),
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.svg#IRANSansWeb")format("svg");
+    }
     body{
         background-color: rgb(0, 0, 0);
         font-family: "IRANSansWeb";
@@ -271,5 +272,4 @@
     .footer{
         font-size: xx-large;
     }
-}
 }
