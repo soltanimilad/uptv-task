@@ -1,22 +1,29 @@
 @media screen and (max-width: 1280px) and (min-width: 1030px) {
     
     @font-face {
-        font-family: IRANSans, 'IRANSans', Tahoma;
-        src: url();
+        font-family: "IRANSansWeb";
+        src: url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot");
+        src: url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.svg#IRANSansWeb")format("svg");
     }
     body{
         background-color: rgb(0, 0, 0);
-        font-family: IRANSans, 'IRANSans', Tahoma;
+        font-family: "IRANSansWeb";
     }
     .header {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        justify-items: right;
         background-color: rgba(0, 0, 0, 0.776);
         opacity: 5px;
         padding: 15px 0px 30px 0px;
     }
     .header-menu {
         display: flex;
+        flex: wrap;
         flex-direction: row-reverse;
         gap: 25px;
         padding-top: 15px;
