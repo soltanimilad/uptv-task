@@ -5,6 +5,7 @@
     }
     .header {
         display: flex;
+        flex: wrap;
         justify-content: space-evenly;
         background-color: rgba(0, 0, 0, 0.776);
         opacity: 5px;
