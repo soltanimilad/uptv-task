@@ -1,4 +1,5 @@
 @media screen and (max-width: 1280px) and (min-width: 1030px) {
+<<<<<<< HEAD
     
     @font-face {
         font-family: "IRANSansWeb";
@@ -8,6 +9,11 @@
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff")format("woff"),
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.ttf")format("truetype"),
         url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.svg#IRANSansWeb")format("svg");
+=======
+    @font-face {
+        font-family: IRANSans, 'IRANSans', Tahoma;
+        src: url();
+>>>>>>> 45133fe0445c861508a98a20bf0c58e9eeb7a752
     }
     body{
         background-color: rgb(0, 0, 0);
@@ -15,8 +21,13 @@
     }
     .header {
         display: flex;
+<<<<<<< HEAD
         justify-content: space-between;
         justify-items: right;
+=======
+        flex: wrap;
+        justify-content: space-evenly;
+>>>>>>> 45133fe0445c861508a98a20bf0c58e9eeb7a752
         background-color: rgba(0, 0, 0, 0.776);
         opacity: 5px;
         padding: 15px 0px 30px 0px;
