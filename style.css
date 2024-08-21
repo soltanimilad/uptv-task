@@ -1,17 +1,38 @@
 @media screen and (max-width: 1280px) and (min-width: 1030px) {
-    
     @font-face {
-        font-family: "IRANSansWeb";
-        src: url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot");
-        src: url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot?#iefix")format("embedded-opentype"),
-        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff2")format("woff2"),
-        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff")format("woff"),
-        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.ttf")format("truetype"),
-        url("https://db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.svg#IRANSansWeb")format("svg");
-    }
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: bold;
+        src: url('../fonts/IRANSans-Bold-web.woff') format('woff'); /* All Major Browsers */
+        }
+        @font-face {
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/IRANSans-Medium-web.woff') format('woff'); /* All Major Browsers */
+        }
+        @font-face {
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: 300;
+        src: url('../fonts/IRANSans-Light-web.woff') format('woff'); /* All Major Browsers */
+        }
+        @font-face {
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: 200;
+        src: url('../fonts/IRANSans-UltraLight-web.woff') format('woff'); /* All Major Browsers */
+        }
+        @font-face {
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: normal;
+        src: url('../fonts/IRANSans-web.woff') format('woff'); /* All Major Browsers */
+        }
+
     body{
         background-color: rgb(0, 0, 0);
-        font-family: "IRANSansWeb";
+        font-family: IRANSansWeb;
     }
     .header {
         display: flex;
@@ -131,26 +152,6 @@
         position: relative;
         display: block;
         overflow: hidden;
-    }
-    .images figcaption {
-        color: white;
-        position: absolute;
-        text-align: right;
-        top: 0; 
-        bottom: 0; 
-        left: 0; 
-        right: 0; 
-        padding-right: 40px;
-        padding-bottom: 70px;
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center;
-        line-height: 1.1em;
-        opacity: 0; 
-        z-index: 2;
-    }
-    .images figcaption:hover{
-        opacity: 1;
     }
     .images div:hover{
         filter: brightness(50%);
