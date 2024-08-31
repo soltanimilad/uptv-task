@@ -1,0 +1,163 @@
+@import url('https://fonts.cdnfonts.com/css/iranyekan');
+* {
+    font-family: Roboto, "IRANYekan", sans-serif;
+}
+body{
+    background-color: black;
+}
+@media screen and (min-width : 900px) {
+    .header {
+        position: sticky;
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 0px 40px;
+        background-color: black;
+        backdrop-filter: blur(50px);
+    }
+    .SideBarIcon {
+        display: none;
+        flex-grow: 0;
+    }
+    .list {
+        display: flex;
+        flex-grow: 10;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-left: 70px;
+        padding-right: 20px;
+        font-size: 85%;
+        font-weight: bold;
+    }
+    .list div a {
+        text-decoration: none;
+        color: #acafb3;
+        transition: 0.3s;
+    }
+    .list div a:hover {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        text-align: right;
+        display: none;
+        position:absolute;
+        background-color: #111111f7;
+        backdrop-filter: blur(5px);
+        min-width: 200px;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: x-small;
+        display: block;
+    }
+    .dropdown-content a:hover{
+        text-decoration: none;
+        color: #ffffff;
+        background-color: black;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .SearchBox input::placeholder{
+        text-align: right;
+    }
+    .SearchBox input {
+        outline: none;
+        text-align: right;
+        color: #888a8d;
+        background-color: #141414;
+        border: none;
+    }
+    .SearchBox a {
+        padding-top: 3px;
+        display: flex;
+        background-color: #141414;
+        border: none;
+        text-decoration: none;
+    }
+    .SearchBox div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .SearchBox {
+        vertical-align: middle;
+        flex-grow: 10;
+        flex-shrink: 1;
+        background-color: #141414;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+}
+@media screen and (min-width: 630px) and (max-width: 900px) {
+    .header {
+        position: sticky;
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 0px 40px;
+        background-color: black;
+        backdrop-filter: blur(50px);
+    }
+    .icon{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .SideBarIcon{
+        padding-left: 15px;
+        text-decoration: none;
+        color: white;
+    }
+    .list {
+        display: none;
+    }
+    .SearchBox input::placeholder{
+        text-align: right;
+    }
+    .SearchBox input {
+        outline: none;
+        text-align: right;
+        color: #888a8d;
+        background-color: #141414;
+        border: none;
+    }
+    .SearchBox a {
+        padding-top: 3px;
+        display: flex;
+        background-color: #141414;
+        border: none;
+        text-decoration: none;
+    }
+    .SearchBox div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .SearchBox {
+        vertical-align: middle;
+        flex-grow: 10;
+        flex-shrink: 1;
+        background-color: #141414;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
