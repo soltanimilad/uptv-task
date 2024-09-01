@@ -5,7 +5,7 @@
 body{
     background-color: black;
 }
-@media screen and (min-width : 900px) {
+@media screen and (min-width : 970px) {
     .header {
         position: sticky;
         display: flex;
@@ -49,11 +49,13 @@ body{
     .dropdown-content {
         text-align: right;
         display: none;
-        position:absolute;
+        position: absolute;
         background-color: #111111f7;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
         min-width: 200px;
         z-index: 1;
+        border-radius: 5px;
+        right: 20px;
     }
     .dropdown-content a {
         color: black;
@@ -66,6 +68,7 @@ body{
         text-decoration: none;
         color: #ffffff;
         background-color: black;
+        backdrop-filter: blur(10px);
     }
     .dropdown:hover .dropdown-content {
         display: block;
@@ -87,6 +90,11 @@ body{
         border: none;
         text-decoration: none;
     }
+    .SearchBox i{
+        color: #888a8d;
+        font-size: larger;
+        background-color: #141414;
+    }
     .SearchBox div{
         display: flex;
         justify-content: space-between;
@@ -104,7 +112,7 @@ body{
     }
     
 }
-@media screen and (min-width: 630px) and (max-width: 900px) {
+@media screen and (min-width: 630px) and (max-width: 970px) {
     .header {
         position: sticky;
         display: flex;
@@ -131,6 +139,11 @@ body{
     .SearchBox input::placeholder{
         text-align: right;
     }
+    .SearchBox i{
+        color: #888a8d;
+        font-size: larger;
+        background-color: #141414;
+    }
     .SearchBox input {
         outline: none;
         text-align: right;
@@ -159,5 +172,46 @@ body{
         padding-bottom: 10px;
         padding-right: 25px;
         padding-left: 25px;
+    }
+}
+@media screen and (max-width: 630px) {
+    .header {
+        position: sticky;
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 0px 40px;
+        background-color: black;
+        backdrop-filter: blur(50px);
+    }
+    .icon{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .SideBarIcon{
+        padding-left: 15px;
+        text-decoration: none;
+        color: white;
+    }
+    .list {
+        display: none;
+    }
+    .SearchBox input{
+        display: none;
+    }
+    .SearchBox a {
+        padding-top: 3px;
+        display: flex;
+        background-color: #000000;
+        border: none;
+        text-decoration: none;
+    }
+    .SearchBox i{
+        background-color: #000000;
+        color: #ffffff;
+        font-size: larger;
+        background-color: #141414;
     }
 }
