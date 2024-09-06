@@ -75,11 +75,12 @@ body{
     }
     .SearchBox input::placeholder{
         text-align: right;
+        color: rgba(255, 255, 255, 0.495);
     }
     .SearchBox input {
         outline: none;
         text-align: right;
-        color: #888a8d;
+        color: #ffffff;
         background-color: #141414;
         border: none;
     }
@@ -91,7 +92,7 @@ body{
         text-decoration: none;
     }
     .SearchBox i{
-        color: #888a8d;
+        color: #ffffff;
         font-size: larger;
         background-color: #141414;
     }
@@ -138,16 +139,17 @@ body{
     }
     .SearchBox input::placeholder{
         text-align: right;
+        color: rgba(255, 255, 255, 0.495);
     }
     .SearchBox i{
-        color: #888a8d;
+        color: #ffffff;
         font-size: larger;
         background-color: #141414;
     }
     .SearchBox input {
         outline: none;
         text-align: right;
-        color: #888a8d;
+        color: #ffffff;
         background-color: #141414;
         border: none;
     }
