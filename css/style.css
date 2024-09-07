@@ -1,10 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/iranyekan');
+
 * {
     font-family: Roboto, "IRANYekan", sans-serif;
 }
-body{
+
+body {
     background-color: black;
 }
+
 @media screen and (min-width : 970px) {
     .header {
         position: sticky;
@@ -13,15 +16,22 @@ body{
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 20px 0px 40px;
-        background-color: black;
-        backdrop-filter: blur(50px);
+        padding: 20px 20px 20px 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.74);
+        backdrop-filter: blur(10px);
     }
+
     .SideBarIcon {
+        position: relative;
         display: none;
         flex-grow: 0;
     }
+
     .list {
+        position: relative;
         display: flex;
         flex-grow: 10;
         flex-direction: row-reverse;
@@ -33,50 +43,61 @@ body{
         font-size: 85%;
         font-weight: bold;
     }
+
     .list div a {
         text-decoration: none;
         color: #acafb3;
         transition: 0.3s;
     }
+
     .list div a:hover {
         text-decoration: none;
         color: #ffffff;
     }
-    .dropdown{
+
+    .dropdown {
         position: relative;
         display: inline-block;
     }
+
     .dropdown-content {
         text-align: right;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         position: absolute;
-        background-color: #111111f7;
-        backdrop-filter: blur(10px);
+        background-color: #111111e4;
         min-width: 200px;
         z-index: 1;
         border-radius: 5px;
         right: 20px;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
     }
+
     .dropdown-content a {
-        color: black;
+        color: rgba(0, 0, 0, 0.795);
         padding: 12px 16px;
         text-decoration: none;
         font-size: x-small;
         display: block;
     }
-    .dropdown-content a:hover{
+
+    .dropdown-content a:hover {
         text-decoration: none;
         color: #ffffff;
-        background-color: black;
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.735);
     }
+
     .dropdown:hover .dropdown-content {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
-    .SearchBox input::placeholder{
+
+    .SearchBox input::placeholder {
         text-align: right;
         color: rgba(255, 255, 255, 0.495);
     }
+
     .SearchBox input {
         outline: none;
         text-align: right;
@@ -84,6 +105,7 @@ body{
         background-color: #141414;
         border: none;
     }
+
     .SearchBox a {
         padding-top: 3px;
         display: flex;
@@ -91,28 +113,50 @@ body{
         border: none;
         text-decoration: none;
     }
-    .SearchBox i{
-        color: #ffffff;
+
+    .SearchBox i {
+        color: #ffffffad;
         font-size: larger;
         background-color: #141414;
     }
-    .SearchBox div{
+
+    .SearchBox div {
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
     }
+
     .SearchBox {
+        position: relative;
         vertical-align: middle;
+        border-radius: 3px;
         flex-grow: 10;
         flex-shrink: 1;
         background-color: #141414;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-right: 25px;
-        padding-left: 25px;
+        padding-left: 15px;
+        right: 20px;
     }
-    
+
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        grid-gap: 20px;
+        z-index: 0;
+    }
+    .img-container img {
+        border-radius: 3px;
+        max-width: 305px;
+        width: 100%;
+    }
+    .description{
+        display: none;
+        z-index: 1;
+    }
 }
+
 @media screen and (min-width: 630px) and (max-width: 970px) {
     .header {
         position: sticky;
@@ -125,27 +169,33 @@ body{
         background-color: black;
         backdrop-filter: blur(50px);
     }
-    .icon{
+
+    .icon {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .SideBarIcon{
+
+    .SideBarIcon {
         padding-left: 15px;
         text-decoration: none;
         color: white;
     }
+
     .list {
         display: none;
     }
-    .SearchBox input::placeholder{
+
+    .SearchBox input::placeholder {
         text-align: right;
         color: rgba(255, 255, 255, 0.495);
     }
-    .SearchBox i{
-        color: #ffffff;
+
+    .SearchBox i {
+        color: #ffffffad;
         font-size: larger;
         background-color: #141414;
     }
+
     .SearchBox input {
         outline: none;
         text-align: right;
@@ -153,6 +203,7 @@ body{
         background-color: #141414;
         border: none;
     }
+
     .SearchBox a {
         padding-top: 3px;
         display: flex;
@@ -160,11 +211,13 @@ body{
         border: none;
         text-decoration: none;
     }
-    .SearchBox div{
+
+    .SearchBox div {
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
     }
+
     .SearchBox {
         vertical-align: middle;
         flex-grow: 10;
@@ -175,7 +228,19 @@ body{
         padding-right: 25px;
         padding-left: 25px;
     }
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap: 20px;
+        z-index: 0;
+    }
+    .img-container img {
+        border-radius: 3px;
+        max-width: 403px;
+        width: 100%;
+    }
 }
+
 @media screen and (max-width: 630px) {
     .header {
         position: sticky;
@@ -188,21 +253,26 @@ body{
         background-color: black;
         backdrop-filter: blur(50px);
     }
-    .icon{
+
+    .icon {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .SideBarIcon{
+
+    .SideBarIcon {
         padding-left: 15px;
         text-decoration: none;
         color: white;
     }
+
     .list {
         display: none;
     }
-    .SearchBox input{
+
+    .SearchBox input {
         display: none;
     }
+
     .SearchBox a {
         padding-top: 3px;
         display: flex;
@@ -210,10 +280,22 @@ body{
         border: none;
         text-decoration: none;
     }
-    .SearchBox i{
+
+    .SearchBox i {
         background-color: #000000;
-        color: #ffffff;
+        color: #ffffffad;
         font-size: larger;
         background-color: #141414;
+    }
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        grid-gap: 20px;
+        z-index: 0;
+    }
+    .img-container img {
+        border-radius: 3px;
+        max-width: 305px;
+        width: 100%;
     }
 }
