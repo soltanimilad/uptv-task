@@ -22,6 +22,7 @@ body {
         right: 0;
         background-color: rgba(0, 0, 0, 0.74);
         backdrop-filter: blur(10px);
+        z-index: 100;
     }
 
     .SideBarIcon {
@@ -65,7 +66,7 @@ body {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        background-color: #111111e4;
+        background-color: rgba(17, 17, 17, 0.838);
         min-width: 200px;
         z-index: 1;
         border-radius: 5px;
@@ -75,7 +76,7 @@ body {
     }
 
     .dropdown-content a {
-        color: rgba(0, 0, 0, 0.795);
+        color: rgba(0, 0, 0, 0.804);
         padding: 12px 16px;
         text-decoration: none;
         font-size: x-small;
@@ -85,7 +86,7 @@ body {
     .dropdown-content a:hover {
         text-decoration: none;
         color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.735);
+        background-color: rgba(0, 0, 0, 0.854);
     }
 
     .dropdown:hover .dropdown-content {
@@ -142,18 +143,103 @@ body {
 
     .img-container {
         display: grid;
-        grid-template-columns: repeat(4 , 1fr);
-        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
         z-index: 0;
     }
+
     .img-container img {
         border-radius: 3px;
         max-width: 305px;
         width: 100%;
     }
-    .description{
-        display: none;
+
+    .card {
+        position: relative;
+    }
+    .ratings {
+        display: flex;
+        justify-content: right;
+        padding-top: 30px;
+        padding-right: 20px;
+        gap: 20px;
+        flex-direction: row-reverse;
+    }
+    .ratings .like{
+        display: flex;
+        vertical-align: middle;
+    }
+    .ratings .like i{
+        font-size: small;
+        padding-top: 4px;
+    }
+    .ratings .imdb-rating{
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        gap: 5px;
+    }
+    .ratings .imdb-rating i {
+        font-size: 20px;
+        filter: brightness(400%);
+    }
+    .ratings span {
+        font-size: small;
+        color: white;
+        text-decoration: none;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    .title :last-child{
+        font-size: x-small;
+        text-align: right;
+        color: rgba(211, 211, 211, 0.804);
+        font-weight: bold;
+    }
+    .title :first-child {
+        text-align: right;
+        font-weight: bolder;
+    }
+    .description {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        color: white;
+        background-color: #000000b7;
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
         z-index: 1;
+        transition: 0.4s ease-out;
+    }
+    .card a:hover .description{
+        visibility: visible;
+        opacity: 1;
+    }
+    .description .tag {
+        font-size: small;
+        color: rgb(0, 218, 0);
+        border: 2px solid rgb(0, 218, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .description .tag-best {
+        font-size: small;
+        color: rgb(255, 234, 0);
+        border: 2px solid rgb(255, 234, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -165,9 +251,10 @@ body {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 20px 0px 40px;
+        padding: 20px 20px 20px 40px;
         background-color: black;
         backdrop-filter: blur(50px);
+        z-index: 100;
     }
 
     .icon {
@@ -228,16 +315,105 @@ body {
         padding-right: 25px;
         padding-left: 25px;
     }
+
     .img-container {
         display: grid;
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
         z-index: 0;
     }
+
     .img-container img {
         border-radius: 3px;
         max-width: 403px;
         width: 100%;
+    }
+    .card {
+        position: relative;
+    }
+    .ratings {
+        display: flex;
+        justify-content: right;
+        padding-top: 30px;
+        padding-right: 20px;
+        gap: 20px;
+        flex-direction: row-reverse;
+    }
+    .ratings .like{
+        display: flex;
+        vertical-align: middle;
+    }
+    .ratings .like i{
+        font-size: small;
+        padding-top: 4px;
+    }
+    .ratings .imdb-rating{
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        gap: 5px;
+    }
+    .ratings .imdb-rating i {
+        font-size: 20px;
+        filter: brightness(400%);
+    }
+    .ratings span {
+        font-size: small;
+        color: white;
+        text-decoration: none;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    .title :last-child{
+        font-size: x-small;
+        text-align: right;
+        color: rgba(211, 211, 211, 0.804);
+        font-weight: bold;
+    }
+    .title :first-child {
+        text-align: right;
+        font-weight: bolder;
+    }
+    .description {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        color: white;
+        background-color: #000000b7;
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        z-index: 1;
+        transition: 0.4s ease-out;
+    }
+    .card a:hover .description{
+        visibility: visible;
+        opacity: 1;
+    }
+    .description .tag {
+        font-size: small;
+        color: rgb(0, 218, 0);
+        border: 2px solid rgb(0, 218, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .description .tag-best {
+        font-size: small;
+        color: rgb(255, 234, 0);
+        border: 2px solid rgb(255, 234, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -249,9 +425,10 @@ body {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 20px 0px 40px;
+        padding: 20px 20px 20px 40px;
         background-color: black;
         backdrop-filter: blur(50px);
+        z-index: 100;
     }
 
     .icon {
@@ -287,15 +464,105 @@ body {
         font-size: larger;
         background-color: #141414;
     }
+
     .img-container {
         display: grid;
-        grid-template-columns: repeat(4 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
         z-index: 0;
     }
+
     .img-container img {
         border-radius: 3px;
         max-width: 305px;
         width: 100%;
+    }
+    .card {
+        position: relative;
+    }
+    .ratings {
+        display: flex;
+        justify-content: right;
+        padding-top: 15px;
+        padding-right: 10px;
+        gap: 10px;
+        flex-direction: row-reverse;
+    }
+    .ratings .like{
+        display: flex;
+        vertical-align: middle;
+    }
+    .ratings .like i{
+        font-size: small;
+        padding-top: 2px;
+    }
+    .ratings .imdb-rating{
+        display: flex;
+        vertical-align: middle;
+        flex-direction: row-reverse;
+        gap: 2px;
+    }
+    .ratings .imdb-rating i {
+        font-size: 10px;
+        filter: brightness(400%);
+    }
+    .ratings span {
+        font-size: small;
+        color: white;
+        text-decoration: none;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        padding-top: 5px;
+    }
+    .title :last-child{
+        font-size: x-small;
+        text-align: right;
+        color: rgba(211, 211, 211, 0.804);
+        font-weight: bold;
+    }
+    .title :first-child {
+        font-size: small;
+        text-align: right;
+        font-weight: bolder;
+    }
+    .description {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        color: white;
+        background-color: #000000b7;
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        z-index: 1;
+        transition: 0.4s ease-out;
+    }
+    .card a:hover .description{
+        visibility: visible;
+        opacity: 1;
+    }
+    .description .tag {
+        font-size: small;
+        color: rgb(0, 218, 0);
+        border: 2px solid rgb(0, 218, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .description .tag-best {
+        font-size: small;
+        color: rgb(255, 234, 0);
+        border: 2px solid rgb(255, 234, 0);
+        border-radius: 5px;
+        padding: 3px 8px 3px 8px;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 }
