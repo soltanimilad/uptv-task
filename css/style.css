@@ -150,7 +150,6 @@ body {
 
     .img-container img {
         border-radius: 3px;
-        max-width: 305px;
         width: 100%;
     }
 
@@ -325,7 +324,6 @@ body {
 
     .img-container img {
         border-radius: 3px;
-        max-width: 403px;
         width: 100%;
     }
     .card {
@@ -474,7 +472,6 @@ body {
 
     .img-container img {
         border-radius: 3px;
-        max-width: 305px;
         width: 100%;
     }
     .card {
